@@ -1,0 +1,181 @@
+<!-- home page  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTube</title>
+        <link rel="stylesheet" href="./style/style.css">
+
+        <script src="https://kit.fontawesome.com/56dc9e1c6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <!-- <header> -->
+        <div class="hcontainer">
+
+                <div class="horizontal" id="horizontal">
+                        <div class="align">
+                                <a href="#"><i class="fa-solid fa-bars fa-xl pad1 light"
+                                                onclick="myFunction(this);toggleSidebar();" id="hamburger "></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube fa-2xl pad1 light" id="yt"></i></a>
+                                <div class="switch-container pad1">
+                                        <!-- <span class="switch-label">Dark Mode</span> -->
+                                        <label class="switch">
+                                                <input type="checkbox" id="modeSwitch">
+                                                <span class="slider"></span>
+                                        </label><span><b>light Mode</b></span>
+                                </div>
+                        </div>
+                        <div>
+                                <input type="text" id="searchInput">
+                                <a onclick="search()" id="searchButton"><i
+                                                class="fa-solid fa-magnifying-glass fa-lg light" id="search "
+                                                style="color: white;"></i></a>
+                                                <i class="fa-solid fa-microphone fa-xl light" style="padding-left: 5px;"></i>  
+
+                                <!-- result  -->
+                                <div id="searchResults"></div>
+                                <div id="suggestions"></div>
+                        </div>
+
+                        <div>
+
+                                <a href="#"><i class="fa-solid fa-video fa-xl navbar-icon light"></i></a>
+                                <a href="#"><i class="fa-regular fa-bell fa-xl navbar-icon light"></i></a>
+                                <i class="fa-solid fa-user fa-xl navbar-icon light" id="user" onclick=""></i>
+                                <div class="dropdown-menu">
+                                        <div class="drop-pic"><img src="./assets/profile_img.png" alt="profileImg"
+                                                        class="style">
+                                                <p class="pad"><b>John Doe</b></p>
+                                                <p class="pad"><b>johndoe517</b></p>
+                                                <a href="./yourChannel.html">
+                                                        <p class="pad">View your channel</>
+                                                        </p>
+                                                </a>
+                                        </div>
+                                        <button type="button" class="size" id="size"><i
+                                                        class="fa-brands fa-google fa-xl btn-icon"></i>
+                                                Google Account</button>
+                                        <button type="button" class="size" id="size"><i <i
+                                                        class="fa-solid fa-shuffle fa-xl btn-icon"></i>Switch
+                                                Account</button>
+                                        <button type="button" class="size" id="size"><i
+                                                        class="fa-solid fa-right-from-bracket fa-xl btn-icon"></i>Sign
+                                                Out</button>
+                                        <hr>
+                                        <button type="button" class="size" id="size"><i
+                                                        class="fa-brands fa-square-youtube fa-xl btn-icon"
+                                                        id="light"></i>youtube Studio</button>
+                                        <a href="./membership.html"><button type="button" class="size" id="size"><i
+                                                                class="fa-solid fa-plus fa-xl btn-icon"></i>Purchase &
+                                                        Membership</button></a>
+                                        <button type="button" class="size" id="size"><i
+                                                        class="fa-solid fa-anchor fa-xl btn-icon"></i>Your Data in
+                                                Youtube</button>
+                                        <hr>
+                                        <a href="./settings.html"><button type="button" class="size" id="size"> <i
+                                                                class="fa-solid fa-gear  fa-xl btn-icon "></i>Settings</button></a>
+                                        <a href="./help.html"><button type="button" class="size" id="size"><i
+                                                                class="fa-regular fa-circle-question  fa-xl  btn-icon"></i>Help</button></a>
+                                </div>
+                        </div>
+                </div>
+
+        </div>
+
+        <!-- <div class="vertical"> -->
+
+        <div id="sidebar">
+                <a href="./index.html"><button type="button" class="size" id="size"><i
+                                        class="fa-solid fa-house fa-xl btn-icon"></i>Home</button></a>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-film fa-xl btn-icon"></i>Shorts</button>
+                <button type="button" class="size" id="size"><i class="fa-brands fa-square-youtube fa-xl btn-icon"
+                                id="light"></i>Subscribe</button>
+                <hr>
+                <a href="./yourChannel.html"><button type="button" class="size" id="size"><i
+                                        class="fa-solid fa-house-user fa-xl btn-icon"></i>Your channel</button></a>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-clock-rotate-left fa-xl btn-icon"></i>History</button>
+                <button type="button" class="size" id="size"><i class="fa-solid fa-circle-play fa-xl btn-icon"></i>Your
+                        videos</button>
+                <!-- <button type="button" class="size" id="size"><i lass="fa-solid fa-tv fa-xl btn-icon"></i>Watch later</button> -->
+                <hr>
+                <button type="button" class="size" id="size"><i class="fa-solid fa-ranking-star fa-xl btn-icon"
+                                id="light"></i>Tranding</button>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-music fa-xl btn-icon"></i>Music</button>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-film fa-xl btn-icon"></i>Film</button>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-tower-cell fa-xl btn-icon"></i>Live</button>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-gamepad fa-xl btn-icon"></i>Gaming</button>
+                <button type="button" class="size" id="size"><i
+                                class="fa-solid fa-newspaper fa-xl btn-icon"></i>News</button>
+                <a href="./help.html"><button type="button" class="size" id="size"><i
+                                        class="fa-regular fa-circle-question  fa-xl  btn-icon"></i>Help</button></a>
+                <a href="./settings.html">
+                        <button type="button" class="size" id="size"> <i
+                                        class="fa-solid fa-gear  fa-xl btn-icon "></i>Settings</button></a>
+                <hr>
+                <p align="center" style="margin-top: 5px;" class="pad"><b>Video Downloader</b></p>
+                <input type="text" id="ytdown" placeholder="Enter YT video link ">
+                <hr>
+                <p class="pad">About Press Copyright Contact us Creator Advertise Developers
+                        <a href="./privecy.html" id="sub-description">Terms Privacy Policy & Safety</a> How YouTube worksTest new features <a
+                                href="./feedback.html" id="sub-description">send us feedback</a>
+                </p>
+        </div>
+        <!-- </div> -->
+        <div class="container">
+                <main id="main-content">
+                        <div class="cate" id="cate">
+                                <!-- <i class="fa-solid fa-angle-left btn-icon" style="color: white;"></i> -->
+                                <!-- <button type="button" class="sizeb" id="sizeb">All</button>
+                                <button type="button" class="sizeb" id="sizeb">Gaming</button>
+                                <button type="button" class="sizeb" id="sizeb">Music</button>
+                                <button type="button" class="sizeb" id="sizeb">Live</button>
+                                <button type="button" class="sizeb" id="sizeb">Bollywood Music</button>
+                                <button type="button" class="sizeb" id="sizeb">News</button>
+                                <button type="button" class="sizeb" id="sizeb">Smartphones</button>
+                                <button type="button" class="sizeb" id="sizeb">Movies</button>
+                                <button type="button" class="sizeb" id="sizeb">Actions</button>
+                                <button type="button" class="sizeb" id="sizeb">Comedy</button>
+                                <button type="button" class="sizeb" id="sizeb">Physics</button>
+                                <button type="button" class="sizeb" id="sizeb">Songs</button>
+                                <button type="button" class="sizeb" id="sizeb">Lessons</button>
+                                <button type="button" class="sizeb" id="sizeb">Auditions</button>
+                                <button type="button" class="sizeb" id="sizeb">Recently Uploded</button>
+                                <button type="button" class="sizeb" id="sizeb">Watched</button> -->
+
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(1)">Film </button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(20)">Gaming</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(10)">Music</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(22)">Blogs</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(27)">Education</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(24)">Entertainment</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(25)">News</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(30)">Movies</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(26)">Howto & Style</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(23)">Comedy</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(25)">Physics</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(28)">Science & Technology</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(27)">Lessons</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(19)">Travel & Events</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(2)">Autos & Vehicles</button>
+                                <button type="button" class="sizeb" id="sizeb" onclick="fetchVideosByCategory(17)">Sports</button>
+
+                                <!-- <i class="fa-solid fa-angle-right" style="color: white;"></i> -->
+                        </div>
+                        <div class="screen">
+
+                        </div>
+                </main>
+        </div>
+        <script src="./script/main.js"></script>
+</body>
+
+</html>
